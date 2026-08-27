@@ -1,0 +1,7 @@
+*
+!pyproject.toml
+!pypiserver
+!docker/gunicorn.conf.py
+!docker/entrypoint.sh
+!README.md
+!LICENSE.txt
