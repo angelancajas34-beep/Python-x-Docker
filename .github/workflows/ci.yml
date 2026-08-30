@@ -2,6 +2,10 @@
 
 name: CI
 
+permissions:
+  contents: read
+  packages: write
+
 on:
   # This will run when any branch or tag is pushed
   push:
@@ -219,6 +223,8 @@ jobs:
   create_release:
     if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v')
     runs-on: "ubuntu-latest"
+    permissions:
+      contents: write
     needs:
       - "tests"
     steps:
